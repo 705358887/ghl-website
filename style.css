@@ -143,14 +143,25 @@ input, textarea { font-family: inherit; }
   gap: 12px;
 }
 .logo-mark {
-  width: 36px; height: 36px;
-  border-radius: 8px;
-  background: var(--grad-cta);
+  height: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.logo-mark img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 .logo-text {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: -.01em;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -511,6 +522,152 @@ input, textarea { font-family: inherit; }
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.75;
+}
+
+/* ========================================
+   PRODUCT SVG ANIMATIONS
+   ======================================== */
+
+.product-icon-placeholder svg {
+  width: 180px;
+  height: 144px;
+}
+
+/* --- Shared LED blink --- */
+@keyframes led-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* ===== Product 1: 电镀槽 ===== */
+
+/* Liquid surface wave */
+.tank-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tank-wave 3s ease-in-out infinite alternate;
+}
+@keyframes tank-wave {
+  from { transform: translateX(-5px); }
+  to   { transform: translateX(5px); }
+}
+
+/* Bubbles rising */
+.tank-bubble {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tank-bubble-rise 3s ease-in infinite;
+}
+.tank-bubble--1 { animation-delay: 0s;   animation-duration: 3s; }
+.tank-bubble--2 { animation-delay: 0.7s; animation-duration: 3.5s; }
+.tank-bubble--3 { animation-delay: 1.4s; animation-duration: 2.8s; }
+.tank-bubble--4 { animation-delay: 2.1s; animation-duration: 3.2s; }
+.tank-bubble--5 { animation-delay: 1s;   animation-duration: 2.5s; }
+@keyframes tank-bubble-rise {
+  0%   { transform: translateY(0) scale(1);   opacity: 0.4; }
+  80%  { opacity: 0.3; }
+  100% { transform: translateY(-72px) scale(0.4); opacity: 0; }
+}
+
+/* Electrode glow pulse */
+.tank-electrode-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tank-electrode-pulse 2s ease-in-out infinite;
+}
+.tank-electrode-glow--r { animation-delay: 1s; }
+@keyframes tank-electrode-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%      { transform: scale(1.6); opacity: 0.4; }
+}
+
+/* Power LED */
+.tank-led { animation: led-blink 1.5s ease-in-out infinite; }
+
+/* ===== Product 2: 龙门行车自动线 ===== */
+
+.crane-hoist {
+  animation: crane-move 4.5s ease-in-out infinite;
+}
+@keyframes crane-move {
+  0%, 100% { transform: translateX(-40px); }
+  50%      { transform: translateX(40px); }
+}
+.crane-plc-led { animation: led-blink 1s ease-in-out infinite; }
+
+/* ===== Product 3: 滚镀生产线 ===== */
+
+.barrel-rotate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: barrel-spin 6s linear infinite;
+}
+@keyframes barrel-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.barrel-led   { animation: led-blink 0.8s ease-in-out infinite; }
+.barrel-arrow { animation: barrel-arrow-pulse 2s ease-in-out infinite; }
+@keyframes barrel-arrow-pulse {
+  0%, 100% { opacity: 0.15; }
+  50%      { opacity: 0.45; }
+}
+
+/* ===== Product 4: 电源设备 ===== */
+
+/* Waveform flowing */
+.power-wave {
+  stroke-dasharray: 8 4;
+  animation: wave-flow 0.6s linear infinite;
+}
+@keyframes wave-flow {
+  from { stroke-dashoffset: 12; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* Power LED pulse */
+.power-led {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: power-led-pulse 1.5s ease-in-out infinite;
+}
+@keyframes power-led-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%      { transform: scale(1.3); opacity: 0.4; }
+}
+
+/* Control knobs */
+.power-knob--1 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: knob-rotate 5s ease-in-out infinite;
+}
+.power-knob--2 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: knob-rotate 5s ease-in-out infinite reverse;
+  animation-delay: 1.5s;
+}
+@keyframes knob-rotate {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(120deg); }
+}
+
+/* Current flow particles */
+.power-flow {
+  animation: power-flow 1.2s ease-out infinite;
+}
+.power-flow--1 { animation-delay: 0s; }
+.power-flow--2 { animation-delay: 0.4s; }
+.power-flow--3 { animation-delay: 0.8s; }
+@keyframes power-flow {
+  0%   { transform: translateX(0);  opacity: 0.6; }
+  100% { transform: translateX(25px); opacity: 0; }
+}
+
+/* --- Hover glow boost for all product SVGs --- */
+.product-card:hover .product-icon-placeholder svg {
+  filter: drop-shadow(0 0 12px rgba(46,167,255,0.12));
 }
 
 /* ========== ABOUT SECTION ========== */
