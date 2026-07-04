@@ -308,12 +308,15 @@
 
   /* ============================================
      7. CONTACT FORM HANDLING
+     - POST to /api/contact (Cloudflare Pages Function)
+     - Server generates Word doc and emails to 705358887@qq.com
+     - Falls back to mailto if API is unavailable
      ============================================ */
   function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const name = document.getElementById('formName').value.trim();
@@ -326,22 +329,44 @@
         return;
       }
 
-      // Construct mailto link as a simple submission method
-      const subject = encodeURIComponent(`【网站咨询】${name} - 广汇龙电镀设备询价`);
-      const body = encodeURIComponent(
-        `姓名：${name}\n` +
-        `电话：${phone}\n` +
-        `公司：${company || '未填写'}\n` +
-        `需求：${message || '未填写'}\n` +
-        `\n（来自广汇龙官网在线咨询表单）`
-      );
+      // Show loading state on submit button
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '\u6b63\u5728\u53d1\u9001...';
 
-      // Open email client
-      window.location.href = `mailto:705358887@qq.com?subject=${subject}&body=${body}`;
+      try {
+        // POST form data to Cloudflare Pages Function
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, company, message }),
+        });
 
-      // Show success message
-      showFormMessage(form, '感谢您的咨询！正在为您打开邮件客户端...', 'success');
-      form.reset();
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          showFormMessage(form, result.message || '\u611f\u8c22\u60a8\u7684\u54a8\u8be2\uff01\u4fe1\u606f\u5df2\u53d1\u9001\uff0c\u6211\u4eec\u5c06\u572824\u5c0f\u65f6\u5185\u4e0e\u60a8\u8054\u7cfb\u3002', 'success');
+          form.reset();
+        } else {
+          throw new Error(result.message || '\u53d1\u9001\u5931\u8d25');
+        }
+      } catch (error) {
+        // Fallback: if API is unavailable, use mailto to open email client
+        const subject = encodeURIComponent('\u3010\u7f51\u7ad9\u54a8\u8be2\u3011' + name + ' - \u5e7f\u6c47\u9f99\u7535\u9540\u8bbe\u5907\u8be2\u4ef7');
+        const body = encodeURIComponent(
+          '\u59d3\u540d\uff1a' + name + '\n' +
+          '\u7535\u8bdd\uff1a' + phone + '\n' +
+          '\u516c\u53f8\uff1a' + (company || '\u672a\u586b\u5199') + '\n' +
+          '\u9700\u6c42\uff1a' + (message || '\u672a\u586b\u5199') + '\n' +
+          '\n\uff08\u6765\u81ea\u5e7f\u6c47\u9f99\u5b98\u7f51\u5728\u7ebf\u54a8\u8be2\u8868\u5355\uff09'
+        );
+        showFormMessage(form, '\u5728\u7ebf\u53d1\u9001\u5931\u8d25\uff0c\u6b63\u5728\u4e3a\u60a8\u6253\u5f00\u90ae\u4ef6\u5ba2\u6237\u7aef... \uff08\u6216\u76f4\u63a5\u81f4\u7535\uff1a189 2943 5843\uff09', 'error');
+        window.location.href = 'mailto:705358887@qq.com?subject=' + subject + '&body=' + body;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHtml;
+      }
     });
   }
 
