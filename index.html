@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>广汇龙电镀设备 - 精密制造 智领电镀未来 | 20年专业电镀设备制造商</title>
+  <meta name="description" content="东莞市广汇龙电镀设备有限公司 - 专业电镀槽、龙门行车自动线、滚镀线、电源设备研发制造商，20年行业经验，500+企业客户信赖之选。电话：18929435843">
+  <meta name="keywords" content="电镀设备,电镀槽,龙门行车,自动线,滚镀线,电源设备,广汇龙,东莞电镀设备">
+  <link rel="stylesheet" href="style.css">
+  <!-- 用系统字体替代 Google Fonts，避免国内加载超时阻塞渲染 -->
+  <style>
+    /* 安全兜底：JS 未执行时文字也可见 */
+    .reveal-up, .card-reveal, .stat-reveal, .timeline-item { opacity: 1 !important; transform: none !important; }
+    html.js-ready .reveal-up,
+    html.js-ready .card-reveal,
+    html.js-ready .stat-reveal,
+    html.js-ready .timeline-item { opacity: 0; transform: translateY(36px); }
+    html.js-ready .reveal-up.revealed,
+    html.js-ready .card-reveal.revealed,
+    html.js-ready .stat-reveal.revealed,
+    html.js-ready .timeline-item.revealed { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- ============ PARTICLE CANVAS BACKGROUND ============ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ============ PRECISION LINE OVERLAY (Hero decoration) ============ -->
+  <div class="precision-lines" aria-hidden="true">
+    <svg viewBox="0 0 1440 720" preserveAspectRatio="none">
+      <line class="pline pline-1" x1="0" y1="360" x2="1440" y2="360"/>
+      <line class="pline pline-2" x1="200" y1="100" x2="1240" y2="620"/>
+      <line class="pline pline-3" x1="1200" y1="80" x2="240" y2="640"/>
+      <circle class="pnode pnode-1" cx="720" cy="360" r="4"/>
+      <circle class="pnode pnode-2" cx="200" cy="100" r="3"/>
+      <circle class="pnode pnode-3" cx="1240" cy="620" r="3"/>
+      <circle class="pnode pnode-4" cx="1200" cy="80" r="3"/>
+      <circle class="pnode pnode-5" cx="240" cy="640" r="3"/>
+    </svg>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">广汇龙</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">首页</a>
+        <a href="#products" class="nav-link">产品中心</a>
+        <a href="#about" class="nav-link">关于我们</a>
+        <a href="#solutions" class="nav-link">解决方案</a>
+        <a href="#contact" class="nav-link">联系我们</a>
+      </nav>
+      <a href="#contact" class="header-cta">咨询报价</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="hero-section">
+    <div class="hero-glow hero-glow--top"></div>
+    <div class="hero-glow hero-glow--bottom"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        专业电镀设备制造商 · 20年行业深耕
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        <span class="hero-line">精密制造，</span><br>
+        <span class="hero-line">智领电镀未来</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-2">
+        专注电镀槽、龙门行车自动线、滚镀线及电源设备研发制造，以自动化精工技术赋能每一道电镀工艺，让中国智造走向世界
+      </p>
+      <div class="hero-btns reveal-up delay-3">
+        <a href="#contact" class="btn btn--primary btn--glow">
+          获取解决方案
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#products" class="btn btn--secondary">查看产品</a>
+      </div>
+      <div class="hero-trust reveal-up delay-3">
+        <span class="hero-trust-item">✓ 20年行业经验</span>
+        <span class="hero-trust-item">✓ 500+企业客户</span>
+        <span class="hero-trust-item">✓ 7×24小时响应</span>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS SECTION ============ -->
+  <section id="products" class="section section--products">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">核心产品</span>
+        <h2 class="section-title">以精工装备，定义电镀新标准</h2>
+        <p class="section-desc">从单体电镀槽到全自动龙门行车线，我们提供一站式电镀设备解决方案</p>
+      </div>
+      <div class="products-grid products-grid--4">
+        <article class="product-card card-reveal" data-delay="0">
+          <div class="product-img-wrap">
+            <div class="product-img product-img--1">
+              <div class="product-img-overlay"></div>
+              <div class="product-icon-placeholder">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="8" y="16" width="48" height="32" rx="4" stroke="#2EA7FF" stroke-width="2" opacity=".5"/>
+                  <rect x="12" y="22" width="40" height="20" rx="2" stroke="#2EA7FF" stroke-width="1.5" opacity=".3"/>
+                  <path d="M28 10v6M36 10v6" stroke="#2EA7FF" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <span class="product-num">01</span>
+          <h3 class="product-name">电镀槽</h3>
+          <p class="product-desc">采用进口耐腐蚀材料，精密温控系统，适配镀锌、镀镍、镀铬等多种工艺，槽体寿命远超行业标准</p>
+          <div class="card-shimmer"></div>
+        </article>
+        <article class="product-card card-reveal" data-delay="100">
+          <div class="product-img-wrap">
+            <div class="product-img product-img--2">
+              <div class="product-img-overlay"></div>
+              <div class="product-icon-placeholder">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="8" y="26" width="48" height="14" rx="2" stroke="#13DDC4" stroke-width="2" opacity=".5"/>
+                  <line x1="16" y1="26" x2="16" y2="16" stroke="#13DDC4" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+                  <line x1="32" y1="26" x2="32" y2="14" stroke="#13DDC4" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+                  <line x1="48" y1="26" x2="48" y2="16" stroke="#13DDC4" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+                  <rect x="10" y="14" width="44" height="6" rx="2" stroke="#13DDC4" stroke-width="1.5" opacity=".3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <span class="product-num product-num--cyan">02</span>
+          <h3 class="product-name">龙门行车自动线</h3>
+          <p class="product-desc">全自动PLC控制系统，精准定位±1mm，支持多工位并行作业，产能提升300%，实现无人化智能生产</p>
+          <div class="card-shimmer"></div>
+        </article>
+        <article class="product-card card-reveal" data-delay="200">
+          <div class="product-img-wrap">
+            <div class="product-img product-img--3">
+              <div class="product-img-overlay"></div>
+              <div class="product-icon-placeholder">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="10" y="20" width="44" height="28" rx="4" stroke="#9381FF" stroke-width="2" opacity=".5"/>
+                  <circle cx="22" cy="34" r="6" stroke="#9381FF" stroke-width="1.5" opacity=".4"/>
+                  <circle cx="42" cy="34" r="6" stroke="#9381FF" stroke-width="1.5" opacity=".4"/>
+                  <path d="M16 16h32" stroke="#9381FF" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <span class="product-num product-num--purple">03</span>
+          <h3 class="product-name">滚镀生产线</h3>
+          <p class="product-desc">专用滚筒设计，适用于小零件批量电镀，匀镀性好、效率高，可定制多工位连续滚镀方案</p>
+          <div class="card-shimmer"></div>
+        </article>
+        <article class="product-card card-reveal" data-delay="300">
+          <div class="product-img-wrap">
+            <div class="product-img product-img--4">
+              <div class="product-img-overlay"></div>
+              <div class="product-icon-placeholder">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="16" y="10" width="32" height="44" rx="4" stroke="#FFB454" stroke-width="2" opacity=".5"/>
+                  <path d="M32 18v8M32 38v8M24 28h16" stroke="#FFB454" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+                  <circle cx="32" cy="34" r="3" fill="#FFB454" opacity=".4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <span class="product-num product-num--gold">04</span>
+          <h3 class="product-name">电源设备</h3>
+          <p class="product-desc">高频开关电源与可控硅整流器，输出稳定、纹波低，适配各类电镀工艺需求，节能省耗</p>
+          <div class="card-shimmer"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section id="about" class="section section--about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">关于我们</span>
+        <h2 class="section-title">二十年深耕，铸就电镀设备行业标杆</h2>
+        <p class="section-desc">从佛山到东莞，从手工制造到智能自动化，广汇龙始终专注于电镀设备的研发与创新</p>
+      </div>
+
+      <!-- Company intro -->
+      <div class="about-intro reveal-up delay-1">
+        <div class="about-intro-text">
+          <p>东莞市广汇龙电镀设备有限公司，前身是成立于<span class="highlight">2006年</span>的佛山市禅城区广汇龙五金电器厂。二十年来，企业始终深耕电镀设备制造领域，从最初加工五金、电源设备，发展为如今集电镀槽、龙门行车自动线、滚镀生产线、电源设备于一体的综合性电镀设备制造商。</p>
+          <p>2019年，为扩大生产规模、提升服务能力，公司迁址至<span class="highlight">广东省东莞市虎门镇</span>，注册成立东莞市广汇龙电镀设备有限公司。凭借深厚的技术积累和对品质的执着追求，广汇龙已为<span class="highlight">500+</span>企业客户提供优质设备与服务，产品广泛应用于汽车零部件、电子元器件、五金卫浴等行业领域。</p>
+        </div>
+        <div class="about-intro-badge">
+          <div class="badge-item">
+            <span class="badge-num">2006</span>
+            <span class="badge-label">品牌创立</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-num">2019</span>
+            <span class="badge-label">迁址东莞</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-num">20<span class="badge-suffix">年</span></span>
+            <span class="badge-label">行业深耕</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline reveal-up delay-2">
+        <div class="timeline-line"></div>
+        <div class="timeline-item" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content timeline-content--left">
+            <span class="timeline-year">2006</span>
+            <h3 class="timeline-title">佛山起航</h3>
+            <p class="timeline-desc">李支农先生在佛山禅城区创立广汇龙五金电器厂，开始从事五金、电源设备及自动化电镀生产线的加工制造</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-side="right">
+          <div class="timeline-dot timeline-dot--teal"></div>
+          <div class="timeline-content timeline-content--right">
+            <span class="timeline-year">2019</span>
+            <h3 class="timeline-title">迁址东莞</h3>
+            <p class="timeline-desc">为扩大生产规模与提升服务能力，迁址至广东省东莞市虎门镇，注册成立东莞市广汇龙电镀设备有限公司</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-side="left">
+          <div class="timeline-dot timeline-dot--purple"></div>
+          <div class="timeline-content timeline-content--left">
+            <span class="timeline-year">至今</span>
+            <h3 class="timeline-title">深耕发展</h3>
+            <p class="timeline-desc">累计服务500+企业客户，产品覆盖电镀槽、龙门行车自动线、滚镀线、电源设备等全品类电镀设备</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-side="right">
+          <div class="timeline-dot timeline-dot--gold"></div>
+          <div class="timeline-content timeline-content--right">
+            <span class="timeline-year">未来</span>
+            <h3 class="timeline-title">智造升级</h3>
+            <p class="timeline-desc">持续推进自动化、智能化升级，以技术创新引领电镀设备行业变革，让中国智造走向世界</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core values -->
+      <div class="values-grid">
+        <div class="value-card card-reveal" data-delay="0">
+          <div class="value-icon value-icon--blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L3 7v6c0 5 3.5 8.5 9 9 5.5-.5 9-4 9-9V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="value-title">精工品质</h3>
+          <p class="value-desc">以精密制造为根本，每一台设备经过严格测试，确保品质达标、性能稳定</p>
+        </div>
+        <div class="value-card card-reveal" data-delay="100">
+          <div class="value-icon value-icon--teal">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M10 10h4"/></svg>
+          </div>
+          <h3 class="value-title">诚信经营</h3>
+          <p class="value-desc">以客户信赖为基石，合同规范、交付准时、价格透明，二十年口碑积淀</p>
+        </div>
+        <div class="value-card card-reveal" data-delay="200">
+          <div class="value-icon value-icon--purple">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="value-title">持续创新</h3>
+          <p class="value-desc">以技术升级为动力，不断引入PLC自动控制、精密温控等先进技术，推动产品迭代</p>
+        </div>
+        <div class="value-card card-reveal" data-delay="300">
+          <div class="value-icon value-icon--gold">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
+          </div>
+          <h3 class="value-title">全程服务</h3>
+          <p class="value-desc">以终身保障为承诺，从方案设计到安装调试、售后运维，7×24小时响应，让产线零停机</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS SECTION ============ -->
+  <section id="stats" class="section section--stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item stat-reveal" data-target="20" data-suffix="+">
+          <span class="stat-number" data-value="20+">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">年行业经验</span>
+        </div>
+        <div class="stat-item stat-reveal" data-target="500" data-suffix="+">
+          <span class="stat-number stat-number--cyan" data-value="500+">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">服务企业客户</span>
+        </div>
+        <div class="stat-item stat-reveal" data-target="98" data-suffix="%">
+          <span class="stat-number stat-number--purple" data-value="98%">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">客户满意度</span>
+        </div>
+        <div class="stat-item stat-reveal" data-target="30" data-suffix="+">
+          <span class="stat-number stat-number--gold" data-value="30+">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">专利技术</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTIONS SECTION ============ -->
+  <section id="solutions" class="section section--solutions">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">应用场景</span>
+        <h2 class="section-title">覆盖全产业链电镀需求</h2>
+        <p class="section-desc">从汽车零部件到航空航天，广汇龙设备服务多元产业领域</p>
+      </div>
+      <div class="solutions-grid">
+        <div class="sol-card card-reveal sol-card--blue" data-delay="0">
+          <div class="sol-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2EA7FF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <h3 class="sol-title">汽车零部件</h3>
+          <p class="sol-desc">轮毂、紧固件、装饰件等汽车零部件的自动化电镀产线</p>
+        </div>
+        <div class="sol-card card-reveal sol-card--teal" data-delay="80">
+          <div class="sol-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#13DDC4" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          </div>
+          <h3 class="sol-title">电子元器件</h3>
+          <p class="sol-desc">连接器、端子、PCB板等高精度电子元器件的精密电镀加工</p>
+        </div>
+        <div class="sol-card card-reveal sol-card--purple" data-delay="160">
+          <div class="sol-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9381FF" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="sol-title">五金卫浴</h3>
+          <p class="sol-desc">水龙头、花洒、挂件等卫浴五金的表面处理与电镀装饰</p>
+        </div>
+        <div class="sol-card card-reveal sol-card--gold" data-delay="240">
+          <div class="sol-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFB454" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="sol-title">航空航天</h3>
+          <p class="sol-desc">航空零部件的功能性电镀与表面强化处理，满足严苛行业标准</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES SECTION ============ -->
+  <section id="services" class="section section--services">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">服务优势</span>
+        <h2 class="section-title">不止于设备，更是全生命周期服务</h2>
+        <p class="section-desc">从需求沟通到售后运维，全程专人对接，保障产线稳定运行</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card card-reveal" data-delay="0">
+          <div class="svc-step">01</div>
+          <h3 class="svc-title">定制化设计</h3>
+          <p class="svc-desc">根据生产工艺、空间布局、产能目标量身定制设备方案，确保最佳匹配</p>
+        </div>
+        <div class="svc-card card-reveal" data-delay="120">
+          <div class="svc-step svc-step--teal">02</div>
+          <h3 class="svc-title">安装调试</h3>
+          <p class="svc-desc">专业工程师团队现场安装、精密调试，确保设备投产即达到设计产能</p>
+        </div>
+        <div class="svc-card card-reveal" data-delay="240">
+          <div class="svc-step svc-step--purple">03</div>
+          <h3 class="svc-title">售后运维</h3>
+          <p class="svc-desc">7×24小时响应机制，定期巡检保养，备件快速供应，保障产线零停机</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">联系我们</span>
+        <h2 class="section-title">获取专属设备方案与报价</h2>
+        <p class="section-desc">留下您的需求，我们将在24小时内与您联系</p>
+      </div>
+      <div class="contact-grid">
+        <!-- Contact info -->
+        <div class="contact-info card-reveal" data-delay="0">
+          <h3 class="contact-info-title">东莞市广汇龙电镀设备有限公司</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2EA7FF" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-info-label">公司地址</span>
+              <span class="contact-info-value">广东省东莞市虎门镇健民路4号101室</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#13DDC4" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <span class="contact-info-label">联系人</span>
+              <span class="contact-info-value">李先生</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#13DDC4" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <span class="contact-info-label">联系电话</span>
+              <span class="contact-info-value"><a href="tel:18929435843" style="color:inherit;text-decoration:none;">189 2943 5843</a></span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9381FF" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </div>
+            <div>
+              <span class="contact-info-label">电子邮箱</span>
+              <span class="contact-info-value">705358887@qq.com</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFB454" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <div>
+              <span class="contact-info-label">统一社会信用代码</span>
+              <span class="contact-info-value">91441900MA543CF12G</span>
+            </div>
+          </div>
+          <div class="contact-info-note">
+            <p>前身：佛山市禅城区广汇龙五金电器厂（2006年成立）</p>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-wrap card-reveal" data-delay="100">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="formName">您的称呼</label>
+              <input class="form-input" type="text" id="formName" name="name" placeholder="请输入您的姓名" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="formPhone">联系电话</label>
+              <input class="form-input" type="tel" id="formPhone" name="phone" placeholder="请输入您的手机号码" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="formCompany">公司名称</label>
+              <input class="form-input" type="text" id="formCompany" name="company" placeholder="请输入您的公司名称（选填）">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="formMessage">需求描述</label>
+              <textarea class="form-textarea" id="formMessage" name="message" rows="4" placeholder="请描述您的电镀设备需求，如设备类型、产能要求、预算等"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--glow btn--block">
+              提交咨询
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-hint">提交后我们将在24小时内与您联系，您的信息将被严格保密</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">广汇龙</span>
+          <p class="footer-tagline">东莞市广汇龙电镀设备有限公司<br>专业电镀设备制造商 · 20年行业深耕</p>
+          <div class="footer-contact-mini">
+            <span>👤 联系人：李先生</span>
+            <span>📞 189 2943 5843</span>
+            <span>✉️ 705358887@qq.com</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">产品中心</h4>
+          <a href="#products" class="footer-link">电镀槽</a>
+          <a href="#products" class="footer-link">龙门行车自动线</a>
+          <a href="#products" class="footer-link">滚镀生产线</a>
+          <a href="#products" class="footer-link">电源设备</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">关于我们</h4>
+          <a href="#about" class="footer-link">公司简介</a>
+          <a href="#about" class="footer-link">发展历程</a>
+          <a href="#about" class="footer-link">核心价值观</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">联系我们</h4>
+          <a href="#contact" class="footer-link">获取报价</a>
+          <a href="#contact" class="footer-link">在线咨询</a>
+          <p class="footer-address">广东省东莞市虎门镇<br>健民路4号101室</p>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2006-2026 东莞市广汇龙电镀设备有限公司 All Rights Reserved.</span>
+        <span class="icp">统一社会信用代码：91441900MA543CF12G</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
